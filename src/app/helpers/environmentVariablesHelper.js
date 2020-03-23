@@ -13,16 +13,16 @@ let envVariables = {
 
   // Application Start-up - Hosts and PORT Configuration
   PORTAL_PORT: env.sunbird_port || 3000,
-  LEARNER_URL: env.sunbird_learner_player_url || 'https://staging.open-sunbird.org/api/',
-  CONTENT_URL: env.sunbird_content_player_url || 'https://staging.open-sunbird.org/api/',
-  CONTENT_PROXY_URL: env.sunbird_content_proxy_url || 'https://staging.open-sunbird.org',
+  LEARNER_URL: env.sunbird_learner_player_url || 'http://ec2-34-230-91-158.compute-1.amazonaws.com/api/',
+  CONTENT_URL: env.sunbird_content_player_url || 'http://ec2-34-230-91-158.compute-1.amazonaws.com/api/',
+  CONTENT_PROXY_URL: env.sunbird_content_proxy_url || 'http://ec2-34-230-91-158.compute-1.amazonaws.com',
   PORTAL_REALM: env.sunbird_portal_realm || 'sunbird',
-  PORTAL_AUTH_SERVER_URL: env.sunbird_portal_auth_server_url || 'https://staging.open-sunbird.org/auth',
+  PORTAL_AUTH_SERVER_URL: env.sunbird_portal_auth_server_url || 'https://ec2-34-230-91-158.compute-1.amazonaws.com/auth',
   PORTAL_AUTH_SERVER_CLIENT: env.sunbird_portal_auth_server_client || 'portal',
   PORTAL_API_AUTH_TOKEN: env.sunbird_api_auth_token,
-  PORTAL_ECHO_API_URL: env.sunbird_echo_api_url || 'https://staging.open-sunbird.org/api/echo/',
-  CONFIG_URL: env.sunbird_config_service_url || 'https://staging.open-sunbird.org/api/config/',
-  EKSTEP_ENV: env.ekstep_env || 'qa',
+  PORTAL_ECHO_API_URL: env.sunbird_echo_api_url || 'http://ec2-34-230-91-158.compute-1.amazonaws.com/api/echo/',
+  CONFIG_URL: env.sunbird_config_service_url || 'http://ec2-34-230-91-158.compute-1.amazonaws.com/api/config/',
+  EKSTEP_ENV: env.ekstep_env || 'dev',
   DEVICE_REGISTER_API: process.env.sunbird_device_register_api || 'https://api.open-sunbird.org/v3/device/register/',
   DEVICE_PROFILE_API: process.env.sunbird_device_profile_api || 'https://staging.open-sunbird.org/api/v3/device/profile/',
   sunbird_theme: env.sunbird_theme || 'default',
@@ -50,7 +50,7 @@ let envVariables = {
 
   // Telemetry Configuration
   PORTAL_TELEMETRY_PACKET_SIZE: env.sunbird_telemetry_packet_size || 1000,
-  TELEMETRY_SERVICE_LOCAL_URL: env.sunbird_telemetry_service_local_url || 'http://telemetry-service:9001/',
+  TELEMETRY_SERVICE_LOCAL_URL: env.sunbird_telemetry_service_local_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:9001/',
 
 
   // Keycloak Configuration
@@ -108,12 +108,12 @@ let envVariables = {
 
 
   // Service(s) Base URL(s)
-  learner_Service_Local_BaseUrl: env.sunbird_learner_service_local_base_url || 'http://learner-service:9000',
-  content_Service_Local_BaseUrl: env.sunbird_content_service_local_base_url || 'http://content-service:5000',
-  CONTENT_SERVICE_UPSTREAM_URL: env.sunbird_content_service_upstream_url || 'http://localhost:5000/',
-  LEARNER_SERVICE_UPSTREAM_URL: env.sunbird_learner_service_upstream_url || 'http://localhost:9000/',
+  learner_Service_Local_BaseUrl: env.sunbird_learner_service_local_base_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:9000',
+  content_Service_Local_BaseUrl: env.sunbird_content_service_local_base_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:5000',
+  CONTENT_SERVICE_UPSTREAM_URL: env.sunbird_content_service_upstream_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:5000/',
+  LEARNER_SERVICE_UPSTREAM_URL: env.sunbird_learner_service_upstream_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:9000/',
   DATASERVICE_URL: env.sunbird_dataservice_url || 'https://staging.open-sunbird.org/api/',
-  PORTAL_EXT_PLUGIN_URL: process.env.sunbird_ext_plugin_url || 'http://player_player:3000/plugin/',
+  PORTAL_EXT_PLUGIN_URL: process.env.sunbird_ext_plugin_url || 'http://Swarm-Managers-LB-414905648.us-east-1.elb.amazonaws.com:3000/plugin/',
 
 
   // Health Checks Configuration
