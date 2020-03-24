@@ -33,7 +33,7 @@
           <div class="sb-field-group" *ngSwitchCase="'phone'">
               <label>{{resourceService?.frmelmnts?.prmpt?.enterphoneno}}</label>
               <div class="sb-field ui left icon input">
-                  <input class="sb-form-control" formControlName="phone" type="number" placeholder="Enter Mobile Number">
+                  <input class="sb-form-control" formControlName="phone" type="number" placeholder="Enter Mobile Number1">
                   <i class=" icon">{{resourceService?.frmelmnts?.lbl?.indPhoneCode}}-</i>
               </div>
               <label class="ui basic blue error label pt-0" *ngIf="contactTypeForm.controls.phone.dirty && contactTypeForm.controls['phone'].errors">{{resourceService?.frmelmnts?.lbl?.validPhone}}</label>
